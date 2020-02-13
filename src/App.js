@@ -20,9 +20,9 @@ const StyleButton = styled.button`
 class App extends Component {
     state = {
         persons: [
-            { id: 'asfa1', name: 'Max', age: 28 },
-            { id: 'vasdf1', name: 'Manu', age: 29 },
-            { id: 'asdf11', name: 'Stephanie', age: 26 }
+            { id: '1', name: 'Max', age: 28 },
+            { id: '2', name: 'Manu', age: 29 },
+            { id: '3', name: 'Stephanie', age: 26 }
         ],
         otherState: 'some other value',
         showPersons: false
