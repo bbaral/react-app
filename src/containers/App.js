@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Person from './Person/Person';
+import Person from '../components/Persons/Person/Person';
 import styled from "styled-components";
-import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
+import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
 
 const StyleButton = styled.button`
             background-color: ${props => props.alt ? 'red' : 'green'};
@@ -75,7 +75,8 @@ class App extends Component {
         if ( this.state.showPersons ) {
             persons = (
                 <div>
-                    {this.state.persons.map( ( person, index ) => {
+                    {
+                        this.state.persons.map( ( person, index ) => {
                         return <ErrorBoundary>
                             key={person.id}
                             <Person
@@ -85,7 +86,8 @@ class App extends Component {
 
                             changed={( event ) => this.nameChangedHandler( event, person.id )} />
                         </ErrorBoundary>
-                    } )}
+                    })
+                    }
                 </div>
             );
 
