@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
-import Cockpit from '../components/Cockpit/Cockpit';
+import Cockpit from '../components/cockpit/Cockpit';
 
 class App extends Component {
     constructor(props) {
@@ -12,9 +12,9 @@ class App extends Component {
 
     state = {
         persons: [
-            { id: '1a', name: 'Max', age: 28 },
-            { id: '1b', name: 'Manu', age: 29 },
-            { id: '1c', name: 'Stephanie', age: 26 }
+            { id: 'asfa1', name: 'Max', age: 28 },
+            { id: 'vasdf1', name: 'Manu', age: 29 },
+            { id: 'asdf11', name: 'Stephanie', age: 26 }
         ],
         otherState: 'some other value',
         showPersons: false
@@ -25,9 +25,9 @@ class App extends Component {
         return state;
     }
 
-    componentWillMount() {
-        console.log('[App.js] componentWillMount');
-    }
+    // componentWillMount() {
+    //   console.log('[App.js] componentWillMount');
+    // }
 
     componentDidMount() {
         console.log('[App.js] componentDidMount');
