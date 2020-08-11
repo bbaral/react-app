@@ -15,7 +15,7 @@ class Blog extends Component {
     }
 
     componentDidMount() {
-        const getPost = axios.get('https://jsonplaceholder.typicode.com/postss');
+        const getPost = axios.get('https://jsonplaceholder.typicode.com/posts');
 
         getPost.then((response) => {
             const limit = response.data.slice(0, 4);
